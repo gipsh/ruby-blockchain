@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "./block.rb"
+require "./blockchain.rb"
+require "irb"
+
+# bostrap data for testing
+@bc = Blockchain.new
+@bc.create_block('hi im the first block')
+@bc.create_block('hi im the second block')
+@bc.create_block('hi im the third block')
+
+IRB.start
